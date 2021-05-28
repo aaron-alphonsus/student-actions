@@ -1,0 +1,335 @@
+% FIRST OF ALL:
+% If you are using X-based Emacs to read this file, please switch on
+% Syntax Highlighting by typing:
+%    ALT-X  font-lock-mode   (or META-X on X-Terminals)
+%
+% That should make these comments nice and red so they can be easily
+% distinguished from the actual code. 
+% =======================================================================
+
+% This is a template for  Masters' Theses at WPI.
+% It complies (more or less) to the standards given by the Library 
+% (as of February 1999)
+%
+% Feel free to use this file, but I give no guarantee for its compliance
+% to standards (meaning I won't pay for the paper if the library rejects it :))
+%
+%
+% The lengths (textheight, width etc.) are fine-tuned for ps1, ps2, and ps3, 
+% but seem to be somewhat dependent on the machine you are using to compile, 
+% the date, time, moon phase, the weather, and other quantum effects.
+% You may have to change \oddsidemargin a little, but it's about 98% correct.
+%
+% Also, the spacing is correct (doublespacing with footnotes correctly
+% singlespaced). Curiously, the font size is not specified in the
+% regulations. So feel free to change it, but the majority of theses
+% that I have seen is written in 12 point font.
+% 
+% As for the inclusion of graphics, I recommend the methods specified
+% in ``latexguide.ps'' off the CS-GSO Website. You can use other
+% methods including copy and paste with a photocopier, but I think
+% using the graphicx package is the easiest.
+%
+% Have fun and good luck with the thesis.
+%
+%
+%  Andreas Koeller (koeller@wpi.edu)
+%
+%
+%
+
+% The preamble
+%
+%
+% 12 point font, and your thesis is a ``report'' to LaTeX
+\documentclass[12pt]{article}
+
+% this enables correct linespacing and graphics inclusion via 
+%``\includegraphics''
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{mathptmx}
+\usepackage{pdfpages}
+
+% leave 1.5in margin to the left and 1in margin to the other
+% sides. Don't print page number in the margin (but rather above it)
+\usepackage[
+backend=biber,
+style=ieee,
+sorting=ynt
+]{biblatex}
+\addbibresource{mybib.bib}
+
+\setlength{\textheight}{8.63in}
+\setlength{\textwidth}{5.9in}
+\setlength{\topmargin}{-0.2in}
+\setlength{\oddsidemargin}{0.3in}
+\setlength{\evensidemargin}{0.3in}
+\setlength{\headsep}{0.0in}
+% Start to write
+\begin{document}
+
+% First things first: The Titlepage
+% This is the recommended format by the library
+%
+
+
+% Define \brk as a command for leaving a little vertical space. Makes
+% the titlepage easier to read - normally, this is NOT GOOD LATEX
+% STYLE!!!
+%
+\newcommand{\brk}{\vspace*{0.18in}}
+
+% No page number on the title page
+\thispagestyle{empty}
+
+% Center the whole title page
+\begin{center}
+
+\brk
+
+% Large font and bold face for the headline. Try to keep it at one or
+% two lines. Headlines over two lines will mess up the spacing, and you have to
+% manually finetune it. Note that the line break in the SOURCE CODE
+% does not affect the line breaking in the output file. If you want
+% hardcoded line breaks, you have to mark them with a double backslash (\\)
+
+   {\large 
+  \textbf{
+   Aloja: Generation of Mutated IoT-based Protocols 
+  }
+   }
+
+
+\brk
+by
+
+\brk
+% insert your name here. 
+Tongwei Ren
+
+
+% All this is constant:
+\brk\brk
+A Thesis Proposal
+
+\brk
+Submitted to the Faculty
+
+\brk
+of the 
+
+\brk
+WORCESTER POLYTECHNIC INSTITUTE
+  
+\brk
+In partial fulfillment of the requirements for the
+
+\brk
+Degree of Master of Science
+
+\brk
+in
+
+\brk
+Computer Science
+
+\brk
+
+
+% by
+
+% This is how LaTeX draws lines :) It's where your signature goes.
+\brk\brk
+\rule{3in}{1.2pt}
+
+% Adjust this to your preferred month and year
+\brk
+November 2020
+
+\end{center}
+
+  
+\vfill
+\begin{center}
+Advised by: Professor Lorenzo De Carli
+\end{center}
+
+\vspace{0.35in}
+
+% Change this to your favorite CS professor.
+
+
+\vspace{0.35in}
+
+% This is also constant :)
+
+
+% \begin{flushright}  
+% \vspace{0.35in}
+% \rule{3in}{0.8pt}
+% Professor [TBD], Thesis Reader
+
+
+
+% \end{flushright}
+% Change this to your favorite CS professor.
+
+
+
+
+
+% end of titlepage
+\newpage
+
+% This is the command for doublespacing when you use the setspace
+% package
+% Please do NOT use \baselinestretch, this will mess up everything,
+% cause earthquakes, tornados and lots of questions for me...
+% If you need a singlespaced paragraph (BAD STYLE!!!), use
+% \singlespacing or \onehalfspacing and enclose it together with the
+% paragraph in braces {\singlespacing This is my text... blah blah blah}
+%
+
+
+% From here on, we need Roman page numbers according to the library
+% regulations. So let's assign those.
+
+\pagenumbering{arabic} % or {Roman} if you like them capitalized
+
+% The next thing is the Prefae (``Acknowledgements'').
+% No standard environment for that, so we'll format it by hand.
+%
+
+% P.S. You don't have to add me to the acknowledgements for providing 
+% this file :)
+
+
+% And now - tataa - the text.
+% This is the place to become really creative.
+
+% From here on, we need arabic numbering again and we need to start
+% from 1.
+
+
+
+% 
+% Since this is a ``report'', the topmost level of hierarchy is
+% ``Chapter'', not section as you may be used to. Chapters are
+% enumerated starting from 1, so Sections are 1.1, Subsections are
+% 1.1.1, subsubsections don't get numbers. (You can change that, if
+% you want them to be called 1.1.1.1)
+%
+
+\section{INTRODUCTION}
+
+
+
+
+
+\setcounter{secnumdepth}{0} %% no numbering
+\subsection{Related Work}
+
+Hello \cite{10.1145/2342441.2342467}
+
+\setcounter{secnumdepth}{1} %% Start numbering again
+
+% \newpage
+\section{METHODOLOGY}
+
+
+
+\setcounter{secnumdepth}{2}
+
+
+% The functions lists are used to check and remove spurious results in the mappings when we generate the constructor $\rightarrow$ parser mapping. The spurious results refer to functions that may appear on the mappings but not in the lists.
+
+
+% Besides, assuming we already have some different mutation strategies, we also want to make the mutation dynamic, the application will 
+
+% \newpage
+\section{PRELIMINARY RESULTS}
+
+% This part will show some results we already got or we expect to get.
+
+
+% \newpage 
+\section{PROPOSED WORK}
+
+
+
+\newpage
+\setcounter{secnumdepth}{0} %% no numbering
+\subsection{Timeline}
+
+\setcounter{secnumdepth}{1} %% Start numbering again
+
+\begin{figure}[hbt!]
+  \centering
+  \includegraphics[scale=0.85]{Master_Thesis_Timeline.png}
+%   \captionof{figure}{A sublist of the parser functions list}
+\end{figure}
+
+% \includepdf[pages={1}]{Master_Thesis_Timeline.pdf}
+
+% Let's assume this is the end of your thesis text.
+
+% Now come appendices, if you had any.
+% Appendices are automatically numbered, just like everything else in
+% LaTeX. But only after you gave this command
+
+
+
+% Last and least (at least, that's what the library says) - the
+% Bibliography.
+
+
+% you can save some space by having the bibliography singlespaced, if you want
+\singlespacing
+
+%
+% You should become familiar with the BibTeX program, which
+% uses a *.bib-file to collect all citations that you have. It's a lot
+% prettier than typing all the citations right into the document. The 
+% reference to citations also works well that way, but the exact 
+% explanation of that will be on the CS-GSO homepage, whenever I'll ever 
+% have time for that.
+%
+%
+% If you use BibTeX, the bibliography is very easy. You refer to
+% citations in the text with \cite{tag}, where tag is the tag that you
+% defined in the bib-file.
+% Then, you run bibtex once in a while during compilation, and the
+% rest is done in two lines:
+
+\break
+\printbibliography
+
+
+% which assumes a file foo.bib in your working directory.
+% The word ``Bibliography'' will appear in your document as soon as
+% you used ``bibtex'' on the command line.
+%
+% For reference on this, refer to the CS-GSO homepage.
+
+%============================
+%That's all, folks. Have fun.
+%
+%                     Andreas
+%============================
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
